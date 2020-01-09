@@ -1,0 +1,21 @@
+name: build
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build docker image
+        run: docker build -t recsysio/geoipupdate:latest .
+
+      - name: Publish docker image
+        run: |
+          echo ${{ secrets.DOCKER_TOKEN }} | docker login -u recsysio --password-stdin
+          docker push recsysio/geoipupdate:latest
