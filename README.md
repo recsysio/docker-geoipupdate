@@ -31,6 +31,11 @@ Environment variables:
 - `LICENSE_KEY` - License key associated with MaxMind account.
 - `EDITION_IDS` - The edition IDs of the databases to update (separated by spaces).
 
+License
+-------
+
+Released under the [MIT license](LICENSE).
+
 
 [build-link]:     https://github.com/recsysio/docker-geoipupdate/actions?workflow=build
 [build-badge]:    https://github.com/recsysio/docker-geoipupdate/workflows/build/badge.svg
